@@ -9,7 +9,7 @@ export default function ThemeToggle() {
       fontSize: 18, minHeight: 40, minWidth: 40,
       display: 'flex', alignItems: 'center', justifyContent: 'center',
     }} title={`Switch to ${mode === 'dark' ? 'light' : 'dark'} mode`}>
-      {mode === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19'}
+      {mode === 'dark' ? '☀️' : '🌙'}
     </button>
   )
 }

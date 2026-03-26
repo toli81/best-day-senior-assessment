@@ -7,7 +7,7 @@ export const PROTOCOLS = {
     howToTest: 'Stand straight against wall with heels, buttocks, and back touching. Head horizontal, eyes straight ahead. Pull head back to touch wall. Measure horizontal distance between wall and back of head in centimeters.',
     standard: '> 0-4cm = poor posture | > 4cm = fracture risk | Standard = 0',
     equipment: 'Tape measure (3m+) and ruler',
-    errors: 'Head not horizontal \u2022 Measuring from occipital protuberance \u2022 Arching lumbar or extending neck',
+    errors: 'Head not horizontal • Measuring from occipital protuberance • Arching lumbar or extending neck',
     significance: 'Forward head/rounded upper back diminishes walking, stair-climbing, lifting, reaching, dressing, bathing function and increases vertebral fracture susceptibility.',
   },
   backScratch: {
@@ -15,15 +15,15 @@ export const PROTOCOLS = {
     howToTest: 'Place preferred hand behind same-side shoulder reaching down (elbow up). Other hand behind back reaching up. Measure distance between middle fingers. Only better side used for norms.',
     standard: 'Risk = Men: > 8 in | Women: > 4 in',
     equipment: 'Tape measure',
-    errors: 'Measuring from thumbs \u2022 Pulling/grabbing fingers together',
+    errors: 'Measuring from thumbs • Pulling/grabbing fingers together',
     significance: 'Tight shoulders indicate problems reaching or dressing that could progress to more difficulty with daily activities.',
   },
   ankleDorsi: {
     title: 'Ankle Dorsiflexion',
     howToTest: 'Sit with one leg straight, other bent. Pull toes toward body. Goniometer axis 1.5cm below lateral malleolus. Stationary arm parallel to fibula; moveable arm parallel to 5th metatarsal.',
-    standard: 'Risk: < 8\u00b0 knee straight or < 10\u00b0 knee bent',
+    standard: 'Risk: < 8° knee straight or < 10° knee bent',
     equipment: 'Long arm goniometer',
-    errors: 'Not elevating heel for goniometer \u2022 Using wrong knee position value',
+    errors: 'Not elevating heel for goniometer • Using wrong knee position value',
     significance: 'People with less than 8 degrees ankle bend have increased fall risk.',
   },
   oneLeg: {
@@ -31,7 +31,7 @@ export const PROTOCOLS = {
     howToTest: 'Stand on one leg, eyes open, arms crossed or at sides. Stop if foot touches floor/leg, arms touch anything, or standing leg moves. Record up to 20 seconds.',
     standard: '< 5s = increased injurious fall risk | > 20s = normal',
     equipment: 'Stopwatch',
-    errors: 'Reaching around \u2022 Foot on other foot \u2022 Stepping down',
+    errors: 'Reaching around • Foot on other foot • Stepping down',
     significance: 'Unable to stand >5s indicates lower body weakness and increased injurious fall risk.',
   },
   vestibular: {
@@ -47,7 +47,7 @@ export const PROTOCOLS = {
     howToTest: 'Seated, back against chair (17-18in). On Go: stand, walk 3m to line, turn, return, sit with back against chair. Time from Go to seated.',
     standard: '30-39: 4.4s | 40-49: 4.6s | 50-59: 4.9s | 60-69: 5.6s | 70-79: 6.7s | 80-89: 7.8s\n14s+ = fall risk | >9s = predicts disability in 2yr',
     equipment: 'Chair (17-18in), tape (3m), stopwatch',
-    errors: 'Cone instead of line \u2022 Not sitting back against chair \u2022 Wrong speed cue',
+    errors: 'Cone instead of line • Not sitting back against chair • Wrong speed cue',
     significance: 'Measures sit-to-stand, gait speed, turning. >9s predicts disability within 2 years. 14s+ = increased fall risk.',
   },
   tandem: {
@@ -55,7 +55,7 @@ export const PROTOCOLS = {
     howToTest: 'Walk 2m heel-to-toe without spaces. Demo first + practice. Count errors. If 2 or fewer errors: repeat eyes closed for 10 steps.',
     standard: 'Risk: >2 errors eyes open | <5 steps eyes closed',
     equipment: 'Masking tape (2m)',
-    errors: 'Not heel-to-toe \u2022 Gaps between feet',
+    errors: 'Not heel-to-toe • Gaps between feet',
     significance: 'Measures narrow-base walking and proprioception. 2+ errors or <5 steps closed = increased fall risk.',
   },
   step: {
@@ -63,7 +63,7 @@ export const PROTOCOLS = {
     howToTest: 'Mark wall at midpoint between iliac crest and patella. Step in place raising knees to mark for 2 min. Count RIGHT knee only. May use support. Assess vitals pre/post.',
     standard: 'Norms: 60-64: M106/F97 | 65-69: M101/F93 | 70-74: M95/F89 | 75-79: M88/F84',
     equipment: 'Tape measure, masking tape, stopwatch',
-    errors: 'Not assessing vitals \u2022 Counting below-mark steps \u2022 Not cueing knee height',
+    errors: 'Not assessing vitals • Counting below-mark steps • Not cueing knee height',
     significance: 'Measures endurance. Above norms = high likelihood of maintaining independence.',
   },
   grip: {
@@ -71,7 +71,7 @@ export const PROTOCOLS = {
     howToTest: 'Dynamometer 2nd position. Seated, elbow 90 degrees. Squeeze max force R then L. Must be gravity eliminated (forearm supported).',
     standard: 'Age/gender norms in kg (e.g. M 60-64: R 40.69/L 34.84)',
     equipment: 'Grip dynamometer',
-    errors: 'Not gravity eliminated \u2022 Wrong elbow angle \u2022 3rd position',
+    errors: 'Not gravity eliminated • Wrong elbow angle • 3rd position',
     significance: 'Grip relates to function decline and mortality. Below norms = increased disability and mortality risk.',
   },
   calf: {
@@ -79,7 +79,7 @@ export const PROTOCOLS = {
     howToTest: 'Stand facing examiner. Rise on toes of one leg 25x without bending knee. May touch hands for balance. STOP if pressing for support or height decreases 50%.',
     standard: '< 25 times = increased fall risk',
     equipment: 'None',
-    errors: 'Allowing knee bend \u2022 Pushing through arms',
+    errors: 'Allowing knee bend • Pushing through arms',
     significance: 'Calf muscles are key balance controllers. Weak plantarflexors = increased falling risk.',
   },
   sts: {
@@ -95,7 +95,7 @@ export const PROTOCOLS = {
     howToTest: 'PLANK: Prone, prop on elbows, lift body straight from toes to head. Time until break.\nCURL UP: Supine, knees 90deg, arms crossed. Lift until shoulder blades off. Time until blades touch.',
     standard: 'Plank: 73s | Curl-up: M ~3min | W ~80-85s',
     equipment: 'Stopwatch',
-    errors: 'Plank: butt up/spine not neutral \u2022 Curl-up: blades touching before stop',
+    errors: 'Plank: butt up/spine not neutral • Curl-up: blades touching before stop',
     significance: 'Core strength prevents back pain, supports balance, fall prevention and functional performance.',
   },
   backExt: {
@@ -103,7 +103,7 @@ export const PROTOCOLS = {
     howToTest: 'Prone with pillow under lower abdomen above ASISs. Lift sternum off floor maintaining cervical flexion and gluteal stabilization. Time until failure.',
     standard: 'Men: 200-208s (3 min) | Women: 128-150s (2 min)',
     equipment: 'Small pillow, stopwatch',
-    errors: 'Pillow too far forward \u2022 Pushing through arms',
+    errors: 'Pillow too far forward • Pushing through arms',
     significance: 'Back extensor weakness leads to back problems.',
   },
   jump: {

@@ -103,7 +103,7 @@ export function getRisks(r, age, sex) {
       level: r.tE !== '' ? (pf(r.tE) > 2 ? 'risk' : 'safe') : 'none',
     },
     {
-      label: 'Ankle Dorsi (<8\u00b0)',
+      label: 'Ankle Dorsi (<8°)',
       level: r.aV === 'Y' ? 'safe' : (r.aD ? (pf(r.aD) < 8 ? 'risk' : 'safe') : 'none'),
     },
     {

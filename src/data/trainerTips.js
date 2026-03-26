@@ -8,7 +8,7 @@ export const MI_TECHNIQUES = [
     examples: [
       '"Do you mind if we talk about your assessment results?"',
       '"Can we talk a bit about what these scores mean for your daily activities?"',
-      '"I noticed some areas we could improve \u2014 do you mind if we discuss them?"',
+      '"I noticed some areas we could improve — do you mind if we discuss them?"',
     ],
   },
   {
@@ -36,7 +36,7 @@ export const MI_TECHNIQUES = [
     examples: [
       '"A lot of people your age notice their balance isn\'t what it used to be."',
       '"Many of our clients felt the same way when they first saw their scores."',
-      '"It\'s very common to score below norms at first \u2014 that\'s exactly why this program exists."',
+      '"It\'s very common to score below norms at first — that\'s exactly why this program exists."',
     ],
   },
   {
@@ -69,9 +69,9 @@ export const MI_TECHNIQUES = [
     title: 'Presenting Results',
     rationale: 'Present feedback in a neutral, non-judgmental way that empowers clients to make informed decisions. Compare their results to norms so they can see where they stand.',
     examples: [
-      '"Here\'s how your scores compare to others in your age group \u2014 what do you notice?"',
+      '"Here\'s how your scores compare to others in your age group — what do you notice?"',
       '"Your TUG time puts you in a category where research shows increased fall risk. What are your thoughts on that?"',
-      '"Your grip strength is actually above the norm for your age \u2014 that\'s a real strength to build on."',
+      '"Your grip strength is actually above the norm for your age — that\'s a real strength to build on."',
     ],
   },
 ]

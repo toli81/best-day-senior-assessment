@@ -19,7 +19,7 @@ function TipCard({ tip }) {
       }}>
         <span style={{ fontSize: 14, fontWeight: 700, color: C.text }}>{tip.title}</span>
         <span style={{ fontSize: 18, color: C.muted, transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
-          {'\u25BC'}
+          ▼
         </span>
       </button>
       {open && (

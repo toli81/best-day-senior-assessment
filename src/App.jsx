@@ -185,7 +185,7 @@ function AppInner() {
         <div style={{ maxWidth: 700, margin: '0 auto', padding: '16px 12px' }}>
 
           {/* ──── 1. CLIENT INFO ──── */}
-          <Section icon="\uD83D\uDCCB" title="Client Information">
+          <Section icon="📋" title="Client Information">
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: 12 }}>
               <div style={gridCell}>
                 <span style={label}>Name</span>
@@ -270,7 +270,7 @@ function AppInner() {
           </Section>
 
           {/* ──── 2. POSTURE ──── */}
-          <Section icon="\uD83E\uDDBB" title="Posture">
+          <Section icon="🦻" title="Posture">
             <Row label="Neck Angle (cm)" info="posture">
               <NumberInput value={results.na} onChange={v => setR('na', v)} unit="cm" />
               <Badge
@@ -281,7 +281,7 @@ function AppInner() {
           </Section>
 
           {/* ──── 3. FLEXIBILITY ──── */}
-          <Section icon="\uD83E\uDD38" title="Flexibility">
+          <Section icon="🤸" title="Flexibility">
             <Row label="Back Scratch R" info="backScratch">
               <NumberInput value={results.sR} onChange={v => setR('sR', v)} unit="in" />
             </Row>
@@ -293,7 +293,7 @@ function AppInner() {
             </Row>
             {results.aV === 'N' && (
               <Row label="Dorsi Degrees">
-                <NumberInput value={results.aD} onChange={v => setR('aD', v)} unit="\u00B0" />
+                <NumberInput value={results.aD} onChange={v => setR('aD', v)} unit="°" />
                 <Badge
                   level={results.aD === '' ? 'none' : parseFloat(results.aD) >= 8 ? 'safe' : 'risk'}
                 />
@@ -302,7 +302,7 @@ function AppInner() {
           </Section>
 
           {/* ──── 4. STATIC BALANCE ──── */}
-          <Section icon="\uD83E\uDDD8" title="Static Balance">
+          <Section icon="🧘" title="Static Balance">
             <Row label="One Leg Stand R" info="oneLeg">
               <NumberInput value={results.oR} onChange={v => setR('oR', v)} unit="s" />
               <Timer onCapture={v => setR('oR', v)} />
@@ -322,7 +322,7 @@ function AppInner() {
           </Section>
 
           {/* ──── 5. DYNAMIC BALANCE ──── */}
-          <Section icon="\uD83D\uDEB6" title="Dynamic Balance">
+          <Section icon="🚶" title="Dynamic Balance">
             <Row label="TUG (seconds)" info="tug">
               <NumberInput value={results.tug} onChange={v => setR('tug', v)} unit="s" />
               <Timer onCapture={v => setR('tug', v)} />
@@ -347,7 +347,7 @@ function AppInner() {
           </Section>
 
           {/* ──── 6. ENDURANCE ──── */}
-          <Section icon="\u2764\uFE0F" title="Endurance">
+          <Section icon="❤️" title="Endurance">
             <Row label="2-Min Step Test" info="step">
               <NumberInput value={results.st} onChange={v => setR('st', v)} unit="steps" w={90} />
             </Row>
@@ -360,7 +360,7 @@ function AppInner() {
           </Section>
 
           {/* ──── 7. STRENGTH ──── */}
-          <Section icon="\uD83D\uDCAA" title="Strength">
+          <Section icon="💪" title="Strength">
             <Row label="Grip R (lbs)" info="grip">
               <NumberInput value={results.gR} onChange={v => setR('gR', v)} unit="lbs" />
             </Row>
@@ -382,7 +382,7 @@ function AppInner() {
           </Section>
 
           {/* ──── 8. FUNCTION ──── */}
-          <Section icon="\uD83E\uDE91" title="Function">
+          <Section icon="🪑" title="Function">
             <Row label="Sit to Stand (30s)" info="sts">
               <NumberInput value={results.sts} onChange={v => setR('sts', v)} unit="reps" />
             </Row>
@@ -395,7 +395,7 @@ function AppInner() {
           </Section>
 
           {/* ──── 9. CORE ──── */}
-          <Section icon="\uD83C\uDFCB\uFE0F" title="Core">
+          <Section icon="🏋️" title="Core">
             <Row label="Plank (pass 73s?)" info="plank">
               <YesNo value={results.plk} onChange={v => setR('plk', v)} />
               <Timer />
@@ -411,7 +411,7 @@ function AppInner() {
           </Section>
 
           {/* ──── 10. BONUS ──── */}
-          <Section icon="\u2B50" title="Bonus">
+          <Section icon="⭐" title="Bonus">
             <Row label="Can Jump?" info="jump">
               <YesNo value={results.jmp} onChange={v => setR('jmp', v)} />
             </Row>
@@ -421,7 +421,7 @@ function AppInner() {
           </Section>
 
           {/* ──── 11. CONSENT & SERVICES ──── */}
-          <Section icon="\u270D\uFE0F" title="Consent & Services">
+          <Section icon="✍️" title="Consent & Services">
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, marginBottom: 16 }}>
               <input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)}
                 style={{ marginTop: 4, width: 20, height: 20, cursor: 'pointer' }} />
@@ -500,12 +500,12 @@ function AppInner() {
           </div>
 
           {/* Performance Bars */}
-          <Section icon="\uD83D\uDCCA" title="Performance Summary">
+          <Section icon="📊" title="Performance Summary">
             <BarChart items={bars} />
           </Section>
 
           {/* Risk Summary */}
-          <Section icon="\u26A0\uFE0F" title="Risk Assessment">
+          <Section icon="⚠️" title="Risk Assessment">
             <div style={{ display: 'flex', gap: 12, marginBottom: 16 }}>
               <div style={{
                 flex: 1, textAlign: 'center', padding: 12, borderRadius: 12,
@@ -530,7 +530,7 @@ function AppInner() {
           </Section>
 
           {/* Recommended Services */}
-          <Section icon="\uD83D\uDCCB" title="Recommended Services">
+          <Section icon="📋" title="Recommended Services">
             <div style={{ fontSize: 13, color: C.text, lineHeight: 2 }}>
               {riskCount >= 3 && <div style={{ color: C.red, fontWeight: 700 }}>Physical Therapy Referral Recommended</div>}
               {risks.some(r => r.label.includes('Vestibular') && r.level === 'risk') && (
@@ -545,7 +545,7 @@ function AppInner() {
           </Section>
 
           {/* Trainer Tips */}
-          <Section icon={'\uD83D\uDCA1'} title="Trainer Tips">
+          <Section icon="💡" title="Trainer Tips">
             <TrainerTips />
           </Section>
 

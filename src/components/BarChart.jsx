@@ -47,8 +47,8 @@ export default function BarChart({ items }) {
         )
       })}
       <div style={{ display: 'flex', gap: 16, fontSize: 11, color: C.muted, marginTop: 8 }}>
-        <span style={{ color: C.green }}>{'\u25CF'} Meets Standard</span>
-        <span style={{ color: C.red }}>{'\u25CF'} Below Standard</span>
+        <span style={{ color: C.green }}>● Meets Standard</span>
+        <span style={{ color: C.red }}>● Below Standard</span>
         <span style={{ color: C.yellow }}>| Norm Line</span>
       </div>
     </div>

@@ -9,7 +9,7 @@ export default function NumberInput({ value, onChange, unit, w }) {
         inputMode="decimal"
         value={value}
         onChange={e => onChange(e.target.value)}
-        placeholder="\u2014"
+        placeholder="—"
         style={{
           width: w || 75, padding: '10px 8px', borderRadius: 8,
           border: `1px solid ${C.border}`, background: C.bg, color: C.text,

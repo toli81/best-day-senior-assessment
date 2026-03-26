@@ -24,7 +24,7 @@ export default function InfoBubble({ id }) {
         display: 'flex', alignItems: 'center', gap: 4, opacity: 0.8,
         minHeight: 36,
       }}>
-        {open ? '\u25BE Hide' : '\u25B8 Protocol & Info'}
+        {open ? '▾ Hide' : '▸ Protocol & Info'}
       </button>
       {open && (
         <div style={{

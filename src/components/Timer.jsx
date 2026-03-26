@@ -65,7 +65,7 @@ export default function Timer({ onCapture, countFrom }) {
         background: running ? C.red : C.green, color: '#fff',
         minHeight: 44, minWidth: 88,
       }}>
-        {running ? '\u25A0 STOP' : '\u25B6 START'}
+        {running ? '■ STOP' : '▶ START'}
       </button>
       {!running && ms > 0 && onCapture && (
         <button onClick={() => onCapture(sec)} style={{
@@ -84,7 +84,7 @@ export default function Timer({ onCapture, countFrom }) {
         background: 'transparent', color: C.muted,
         cursor: 'pointer', fontSize: 16, minHeight: 44, minWidth: 44,
       }}>
-        \u21BA
+        ↺
       </button>
     </div>
   )
