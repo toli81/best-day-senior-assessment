@@ -56,7 +56,6 @@ function AppInner() {
   const setR = (k, v) => setResults(p => ({ ...p, [k]: v }))
 
   const pts = useMemo(() => calculatePoints(results, client.age, client.sex), [results, client.age, client.sex])
-  const credit = pts * 10
 
   /* ──── SAVE ──── */
   async function handleSave() {
@@ -148,13 +147,6 @@ function AppInner() {
           <div style={{ fontSize: 11, color: C.muted, marginTop: 4 }}>
             1555 Freedom Blvd Suite 120, Provo, UT 84604
           </div>
-          <div style={{
-            marginTop: 10, padding: '6px 16px', borderRadius: 20, display: 'inline-block',
-            background: C.greenDim, border: `1px solid ${C.greenBdr}`, fontSize: 12,
-            fontWeight: 700, color: C.green,
-          }}>
-            Earn up to $210 in training credits!
-          </div>
         </div>
 
         {/* ──── STICKY HEADER ──── */}
@@ -175,7 +167,6 @@ function AppInner() {
             </div>
             <div>
               <div style={{ fontSize: 11, color: C.dim, fontWeight: 600, letterSpacing: 1 }}>POINTS</div>
-              <div style={{ fontSize: 13, color: C.green, fontWeight: 700 }}>${credit} credit</div>
             </div>
           </div>
           <div style={{ display: 'flex', gap: 6 }}>
@@ -506,13 +497,6 @@ function AppInner() {
             <div style={{ fontSize: 14, color: C.dim, fontWeight: 600 }}>
               points earned
             </div>
-            <div style={{
-              marginTop: 16, display: 'inline-block', padding: '10px 28px', borderRadius: 30,
-              background: C.greenDim, border: `1px solid ${C.greenBdr}`,
-              fontSize: 20, fontWeight: 900, color: C.green,
-            }}>
-              ${credit} Training Credit
-            </div>
           </div>
 
           {/* Performance Bars */}
@@ -652,9 +636,6 @@ function AppInner() {
                     fontSize: 24, fontWeight: 900, fontFamily: 'monospace', color: C.accent,
                   }}>
                     {s.points ?? '?'}
-                  </div>
-                  <div style={{ fontSize: 11, color: C.green, fontWeight: 600 }}>
-                    ${(s.points || 0) * 10} credit
                   </div>
                 </div>
               </div>
