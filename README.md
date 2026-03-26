@@ -1,0 +1,147 @@
+# Best Day Senior Assessment
+
+A digital movement and independence evaluation tool built for personal trainers and physical therapists at **Best Day Fitness** (St. Petersburg, FL). Replaces paper-based senior scorecards with a tablet-friendly app featuring built-in timers, auto-scoring, and client progress tracking.
+
+Based on the **AFIT (Advanced Functional Independence Testing)** protocol from occupational therapy, adapted for the fitness and wellness setting.
+
+---
+
+## Features
+
+### Assessment Form
+- **11 test categories**: Posture, Flexibility, Static Balance, Dynamic Balance, Endurance, Strength, Function, Core, and Bonus tests
+- **Built-in timers**: Count-up timers for TUG and Plank tests, countdown timers for 2-Minute Step Test and 30-second Sit to Stand — with one-tap capture to auto-fill results
+- **Smart inputs**: Y/N toggle buttons, number inputs, and dropdowns designed for fast tablet entry
+- **Live scoring**: Sticky header shows real-time point total as data is entered
+
+### Clinical Reference
+- **Collapsible info bubbles** on every test with:
+  - How to administer the test
+  - Equipment needed
+  - Age/gender reference standards from AFIT research
+  - Common errors to watch for
+  - Clinical significance and fall risk implications
+
+### Results & Reporting
+- **Bar charts** comparing client performance against age/gender norms (powered by Recharts)
+- **Risk summary** with green/red badges for each fall risk factor
+- **Recommended services** section based on assessment outcomes
+
+### Data Persistence
+- **IndexedDB** local storage for offline tablet use
+- **Supabase** integration ready for cloud sync across devices
+- **Session history** to track multiple assessments per client over time
+
+### Design
+- Clean, minimal UI optimized for tablet use
+- Dark/light theme toggle
+- Responsive layout works on tablets, laptops, and desktops
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 18, Vite |
+| Charts | Recharts |
+| Local Storage | IndexedDB (via `idb`) |
+| Cloud DB | Supabase (optional) |
+| Production Server | Express 5 |
+| Hosting | Railway |
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm
+
+### Install & Run Locally
+
+```bash
+git clone https://github.com/toli81/best-day-senior-assessment.git
+cd best-day-senior-assessment
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173` in your browser.
+
+### Production Build
+
+```bash
+npm run build
+npm start
+```
+
+Serves the built app on `http://localhost:3000`.
+
+---
+
+## Deployment (Railway)
+
+The app includes a `railway.json` configuration for one-click deployment:
+
+1. Push to GitHub
+2. Connect the repo in [Railway](https://railway.app)
+3. Railway auto-detects the config, runs `npm run build`, then `npm start`
+4. Generate a public domain under **Settings → Networking**
+
+---
+
+## Project Structure
+
+```
+src/
+├── App.jsx                 # Main app with form + results views
+├── ThemeContext.jsx         # Dark/light theme provider
+├── components/
+│   ├── Badge.jsx           # Risk indicator badges
+│   ├── BarChart.jsx        # Performance vs norms chart
+│   ├── InfoBubble.jsx      # Collapsible clinical reference
+│   ├── NumberInput.jsx     # Numeric input with labels
+│   ├── Row.jsx             # Form row layout
+│   ├── Section.jsx         # Collapsible test category
+│   ├── ThemeToggle.jsx     # Theme switcher
+│   ├── Timer.jsx           # Count-up/countdown timer
+│   └── YesNo.jsx           # Toggle button pair
+├── data/
+│   ├── norms.js            # Age/gender reference standards
+│   ├── protocols.js        # Test procedures & equipment
+│   └── trainerTips.js      # Clinical tips per test
+├── db/
+│   ├── local.js            # IndexedDB operations
+│   ├── store.js            # Unified data access layer
+│   └── supabase.js         # Supabase client config
+├── utils/
+│   └── scoring.js          # Point calculation & risk logic
+└── views/
+    └── TrainerTips.jsx     # Trainer reference view
+```
+
+---
+
+## Roadmap
+
+- [ ] Trend graphs across multiple re-tests per client
+- [ ] PDF export for client reports
+- [ ] Digital signature capture for consent form
+- [ ] PWA support for offline tablet use
+- [ ] Multi-trainer login with Supabase Auth
+- [ ] Client management dashboard
+
+---
+
+## About
+
+Built for **Best Day Fitness** — 6619 1st Ave South, St. Petersburg, FL.
+
+📞 727-334-1472 | [Book a Free Consultation](https://bestdayfitness.com)
+
+---
+
+## License
+
+Proprietary — Best Day Fitness. All rights reserved.
